@@ -1,18 +1,54 @@
+:root {
+  --clr-nav: #2d2f31;
+  --clr-span: #f83737;
+  --clr-bg: #1f1f1f;
+
+  --clr-sun-moon-1: #FFDD91;
+  --clr-sun-moon-2: #D6B2A5;
+  --clr-sun-moon-3: #B093A3;
+  --clr-sun-moon-4: #787492;
+  --clr-sun-moon-5: #282E54;
+
+  --clr-midnight-1: #03012D;
+  --clr-midnight-2: #353457;
+  --clr-midnight-3: #686781;
+  --clr-midnight-4: #9A99AB;
+  --clr-midnight-5: #CDCCD5;
+
+  --clr-deconstruction-1: #7B736B;
+  --clr-deconstruction-2: #958F89;
+  --clr-deconstruction-3: #B0ABA6;
+  --clr-deconstruction-4: #CAC7C4;
+  --clr-deconstruction-5: #E5E3E1;
+
+  --clr-side-of-paradise-1: #8F0D27;
+  --clr-side-of-paradise-2: #6F0D27;
+  --clr-side-of-paradise-3: #4F0D27;
+  --clr-side-of-paradise-4: #2F0D27;
+  --clr-side-of-paradise-5: #0F0D27;
+
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
+#content {
+  padding: 0 10%;
+  background-color: var(--clr-bg);
+}
+
 /* Navigation Bar */
 
 nav {
-  background-color: #000;
+  background-color: var(--clr-nav);
   color: #fff;
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   align-items: center;
-  height: 64px;
+  height: 60px;
   width: 100%;
 }
 
@@ -21,7 +57,7 @@ nav a {
   display: flex;
   text-align: center;
   vertical-align: middle;
-  height: 64px;
+  height: 60px;
   text-decoration: none;
 }
 
@@ -38,6 +74,10 @@ nav ul li{
   display: inline-block;
 }
 
+#nav-bar {
+  margin: 0;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -46,11 +86,12 @@ nav ul li{
 .home-button {
   display: flex;
   align-items: center;
-  padding: 0 40px;
+  margin: 0 40px;
+  font-size: 1.2rem;
 }
 
 .nav-buttons {
-  padding: 0 40px;
+  margin: 0 40px;
   text-transform: capitalize;
   display: flex;
   align-items: center;
@@ -58,27 +99,174 @@ nav ul li{
 
 .nav-ind-button {
   padding: 0 20px;
-  color: white;
+  color: #fff;
 }
 
 .brand-text-span {
-  color: rgb(235, 16, 16);
+  color: var(--clr-span);
   margin: 0 5px;
 }
 
 .delay-button {
-  background-color: #000;
-  color: white;
+  background-color: var(--clr-nav);
+  color: #fff;
   border: none;
   cursor: pointer;
   transition: color 0.3s;
 }
 
 .delay-button:hover {
-  color: rgb(235, 16, 16);
+  color: var(--clr-span);
   background-color: #1d1d1d;
 }
 
 .delay-button:active {
   color: rgba(235, 16, 16, 0.637);
+}
+
+/* Colour Section */
+
+#colour-section {
+  background-color: var(--clr-bg);
+  padding: 30px 0;
+  color: #fff
+}
+
+.colour-heading {
+  color: #fff;
+}
+
+.palette {
+  max-width: 100%;
+}
+
+.palette::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.palette-heading {
+  padding-bottom: 3px;
+}
+
+.palette-container {
+  margin: 10px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5%;
+}
+
+.palette-panel {
+  padding: 20px 0;
+}
+
+.palette-color {
+  height: 200px;
+  width: 20%;
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+
+.palette-color:hover .clr-span {
+  visibility: visible;
+}
+
+.clr-span {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 0;
+  padding: 3px 6px;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+/* Sun-Moon Colours */
+
+.clr-sun-moon-1 {
+  background-color: var(--clr-sun-moon-1);
+}
+
+.clr-sun-moon-2 {
+  background-color: var(--clr-sun-moon-2);
+}
+
+.clr-sun-moon-3 {
+  background-color: var(--clr-sun-moon-3);
+}
+
+.clr-sun-moon-4 {
+  background-color: var(--clr-sun-moon-4);
+}
+
+.clr-sun-moon-5 {
+  background-color: var(--clr-sun-moon-5);
+}
+
+/* Midnight Colours */
+
+.clr-midnight-1 {
+  background-color: var(--clr-midnight-1);
+}
+
+.clr-midnight-2 {
+  background-color: var(--clr-midnight-2);
+}
+
+.clr-midnight-3 {
+  background-color: var(--clr-midnight-3);
+}
+
+.clr-midnight-4 {
+  background-color: var(--clr-midnight-4);
+}
+
+.clr-midnight-5 {
+  background-color: var(--clr-midnight-5);
+}
+
+/* Deconstruction Colours */
+
+.clr-deconstruction-1 {
+  background-color: var(--clr-deconstruction-1);
+}
+
+.clr-deconstruction-2 {
+  background-color: var(--clr-deconstruction-2);
+}
+
+.clr-deconstruction-3 {
+  background-color: var(--clr-deconstruction-3);
+}
+
+.clr-deconstruction-4 {
+  background-color: var(--clr-deconstruction-4);
+}
+
+.clr-deconstruction-5 {
+  background-color: var(--clr-deconstruction-5);
+}
+
+/* Side of Paradise Colours */
+
+.clr-side-of-paradise-1 {
+  background-color: var(--clr-side-of-paradise-1);
+}
+
+.clr-side-of-paradise-2 {
+  background-color: var(--clr-side-of-paradise-2);
+}
+
+.clr-side-of-paradise-3 {
+  background-color: var(--clr-side-of-paradise-3);
+}
+
+.clr-side-of-paradise-4 {
+  background-color: var(--clr-side-of-paradise-4);
+}
+
+.clr-side-of-paradise-5 {
+  background-color: var(--clr-side-of-paradise-5);
 }
